@@ -65,5 +65,7 @@ namespace KlinikNetCore.Controllers
             }
             return View();
         }
+
+      
     }
 }
