@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KlinikNetCore.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Yonetim")]
   
     public class AdminController : Controller
     {

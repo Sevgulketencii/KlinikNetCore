@@ -59,14 +59,6 @@ namespace KlinikNetCore
             app.UseRouting();
             
             app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -74,6 +66,14 @@ namespace KlinikNetCore
                   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                 );
             });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            
         }
     }
 }
