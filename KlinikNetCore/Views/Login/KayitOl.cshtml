@@ -1,0 +1,68 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RegistrationForm_v10 by Colorlib</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="~/KayitOl/fonts/linearicons/style.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="~/KayitOl/css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="inner">
+            <img src="~/KayitOl/images/image-1.png" alt="" class="image-1">
+            <form action="/Login/KayitOl" method="post">
+                <h3>Yeni Hesap Oluştur</h3>
+                <div class="form-holder">
+                    <span class="lnr lnr-user"></span>
+                    <input type="text" name="KullaniciAd" class="form-control" placeholder="Adınız">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-phone-handset"></span>
+                    <input type="text" name="KullaniciSoyad" class="form-control" placeholder="Soyadınız">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-phone-handset"></span>
+                    <input type="text" name="UserName" class="form-control" placeholder="Kullanıcı Adı">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-envelope"></span>
+                    <input type="text" name="KullaniciMail" class="form-control" placeholder="Mail adresiniz">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-envelope"></span>
+                    <input type="text" name="KullaniciTel" class="form-control" placeholder="Telefon Numaranız">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-lock"></span>
+                    <input type="password" name="Sifre" class="form-control" placeholder="Şifreniz">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-lock"></span>
+                    <input type="password"  name="Sifre2"  class="form-control" placeholder="Şifreyi Tekrar">
+                </div>
+                <button type="submit">
+                    <span>Kayıt Ol</span>
+                </button>
+                <button asp-controller="Login" asp-action="Giris">
+                    <span>Giriş Yap</span>
+                </button>
+            </form>
+            <img src="~/KayitOl/images/image-2.png" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <script src="~/KayitOl/js/jquery-3.3.1.min.js"></script>
+    <script src="~/KayitOl/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

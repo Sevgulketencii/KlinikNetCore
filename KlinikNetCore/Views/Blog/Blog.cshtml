@@ -1,0 +1,40 @@
+﻿
+
+    <div class="page-banner overlay-dark bg-image" style="background-image: url(/one-health/assets/img/bg_image_1.jpg);">
+        <div class="banner-section">
+            <div class="container text-center wow fadeInUp">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+                        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Anasayfa</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                    </ol>
+                </nav>
+                <h1 class="font-weight-normal">BLOG</h1>
+            </div>
+        </div>
+    </div> 
+
+    <div class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+
+                        @await Component.InvokeAsync("_BlogListe") 
+                       
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        
+
+                       @await Component.InvokeAsync("_BlogEtiket") 
+                       @await Component.InvokeAsync("_SonBloglar") 
+                        
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 

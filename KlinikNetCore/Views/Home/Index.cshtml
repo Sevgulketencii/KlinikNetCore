@@ -1,0 +1,22 @@
+﻿
+<div class="page-hero bg-image overlay-dark" style="background-image: url(one-health/assets/img/bg_image_1.jpg);">
+    <div class="hero-section">
+        <div class="container text-center wow zoomIn">
+            <span class="subhead">Sağlıkta Tek Adres </span>
+            <h1 class="display-4">Random Klinik</h1>
+            <a asp-action="Hakkimizda" asp-controller="Hakkimizda" class="btn btn-primary">Biz Kimiz ?</a>
+        </div>
+    </div>
+</div>
+
+
+@await Component.InvokeAsync("_AnasayfaOzellikler")
+
+@await Component.InvokeAsync("_AnasayfaAciklama")
+
+@await Component.InvokeAsync("_AnasayfaDoktor")
+
+@await Component.InvokeAsync("_AnasayfaBlog")
+
+@await Component.InvokeAsync("_AnasayfaRandevu")
+

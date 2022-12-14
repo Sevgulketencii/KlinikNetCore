@@ -1,0 +1,67 @@
+﻿@model Blog
+<div class="page-section pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb bg-transparent py-0 mb-5">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@Model.BlogBaslik</li>
+                    </ol>
+                </nav>
+            </div>
+        </div> <!-- .row -->
+
+        <div class="row">
+            <div class="col-lg-8">
+                <article class="blog-details">
+                    <div class="post-thumb">
+                        <img src=@Model.BlogImgUrl alt="">
+                    </div>
+                    <div class="post-meta">
+                        <div class="post-author">
+                            <span class="text-grey">By</span> <a href="#">Admin</a>
+                        </div>
+                        <span class="divider">|</span>
+                        <div class="post-date">
+                            <a href="#">@Model.BlogTarih.ToShortDateString()</a>
+                        </div>
+                        <span class="divider">|</span>
+
+                        <span class="divider">|</span>
+                        <div class="post-comment-count">
+                            <a href="#">8 Comments</a>
+                        </div>
+                    </div>
+                    <h2 class="post-title h1">@Model.BlogBaslik</h2>
+                    <div class="post-content">
+                        <p>@Model.BlogAciklama</p>
+                    </div>
+                    <div class="post-tags">
+                        <a href="#" class="tag-link">@Model.BlogEtiket</a>
+
+                    </div>
+                </article> <!-- .blog-details -->
+
+            </div>
+
+
+            <div class="col-lg-4">
+                <div class="sidebar">
+
+
+
+                    @await Component.InvokeAsync("_SonBloglar")
+
+                    @await Component.InvokeAsync("_BlogEtiket")
+
+
+                </div>
+            </div>
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+    @await Component.InvokeAsync("_BlogYorumList")
+
+    @await Component.InvokeAsync("_BlogYorum")
+</div> <!-- .page-section -->

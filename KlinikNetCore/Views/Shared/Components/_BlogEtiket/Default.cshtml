@@ -1,0 +1,12 @@
+﻿@model List<Blog> 
+
+<div class="sidebar-block">
+    <h3 class="sidebar-title">Tag Cloud</h3>
+    <div class="tagcloud">
+        @foreach (var item in Model)
+        {
+            <a href="#" class="tag-cloud-link">@item.BlogEtiket</a>     
+        }
+
+    </div>
+</div>

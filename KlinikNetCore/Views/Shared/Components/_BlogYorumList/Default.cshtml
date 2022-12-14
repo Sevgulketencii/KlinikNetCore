@@ -1,0 +1,29 @@
+﻿@model List<Yorum>
+<br />
+
+<div class="sidebar-block">
+    <h3 class="sidebar-title">Yorumlar</h3>
+
+    @foreach (var item in Model)
+    {<div class="sidebar-block">
+            <div class="blog-item">
+
+                <div class="content">
+
+                    <h5 class="post-title">@item.YorumAdi @item.YorumSoyadi</h5><HR />
+                    <p><strong>@item.YorumMetin</strong></p>
+                    <div>
+                        <a href="#">@item.YorumMail</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <br />
+    }
+
+</div>
+
+
+

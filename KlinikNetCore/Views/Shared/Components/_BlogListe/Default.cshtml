@@ -1,0 +1,31 @@
+﻿@model List<Blog>
+@foreach (var item in Model)
+{
+    <div class="col-sm-6 py-3">
+
+        <div class="card-blog">
+            <div class="header">
+                <div class="post-category">
+                    <a href="#">@item.BlogEtiket</a>
+                </div>
+                <a asp-controller="Blog" asp-action="BlogDetay" asp-route-id=@item.BlogId class="post-thumb">
+                    <img src=@item.BlogImgUrl alt="">
+                </a>
+            </div>
+            <div class="body">
+                <h5 class="post-title"><a asp-controller="Blog" asp-action="BlogDetay" asp-route-id=@item.BlogId>@item.BlogBaslik</a></h5>
+                <div class="site-info">
+                    <div class="avatar mr-2">
+                        <div>
+                            <span class="mai-time"></span>@item.BlogTarih.ToShortDateString()
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+}

@@ -1,0 +1,33 @@
+﻿
+
+<div class="page-section">
+    <div class="container">
+        <h1 class="text-center wow fadeInUp"><strong>Bizimle İletişime Geç</strong></h1>
+
+        <form asp-action="Iletisim" asp-controller="Iletisim" method="post" class="contact-form mt-5">
+            <div class="row mb-3">
+                <div class="col-sm-6 py-2 wow fadeInLeft">
+                    <label for="fullName"><strong>Adınız</strong></label>
+                    <input type="text" name="IletisimAdi" id="fullName" class="form-control" placeholder="Adınız">
+                </div>
+                <div class="col-sm-6 py-2 wow fadeInLeft">
+                    <label for="fullName"><strong>Soyadınız</strong></label>
+                    <input type="text" name="IletisimSoyad" id="fullName" class="form-control" placeholder="Soyadınız">
+                </div>
+                <div class="col-12 py-2 wow fadeInUp">
+                    <label for="emailAddress"><strong>Mail Adresiniz</strong></label>
+                    <input type="text" name="IletisimMail" id="emailAddress" class="form-control" placeholder="E-mail Adresiniz">
+                </div>
+                <div class="col-12 py-2 wow fadeInUp">
+                    <label for="subject"><strong>Mesaj Konusu</strong></label>
+                    <input type="text" name="IletisimBaslik" id="subject" class="form-control" placeholder="Konu Başlığı">
+                </div>
+                <div class="col-12 py-2 wow fadeInUp">
+                    <label for="message"><strong>Mesajınız</strong></label>
+                    <textarea id="message" name="IletisimAciklama" class="form-control" rows="8" placeholder="Mesajınız"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary wow zoomIn">Gönder</button>
+        </form>
+    </div>
+</div>

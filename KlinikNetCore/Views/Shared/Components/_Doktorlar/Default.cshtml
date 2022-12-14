@@ -1,0 +1,35 @@
+﻿@model List<Doktorlar>
+
+<div class="page-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-6 col-lg-4 py-3 wow zoomIn">
+                            <div class="card-doctor">
+                                <div class="header">
+                                    <img src=@item.DoktorİmgUrl alt="">
+                                    <div class="meta">
+                                        <a href=@item.DoktorFcLink><span class="mai-call"></span></a>
+                                        <a href=@item.DoktorTwLink><span class="mai-logo-whatsapp"></span></a>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <p class="text-xl mb-0"><strong>@item.DoktorAd @item.DoktorSoyad </strong></p>
+                                    <span class="text-sm text-grey">@item.DoktorAlan</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

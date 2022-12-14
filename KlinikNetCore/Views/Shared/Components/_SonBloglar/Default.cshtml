@@ -1,0 +1,22 @@
+﻿@model List<Blog>
+
+<div class="sidebar-block">
+    <h3 class="sidebar-title">Son Bloglar</h3>
+    @foreach (var item in Model)
+    {
+        <div class="blog-item">
+            <a class="post-thumb" asp-controller="Blog" asp-action="BlogDetay" asp-route-id=@item.BlogId>
+                <img src=@item.BlogImgUrl alt="">
+            </a>
+            <div class="content">
+                <h5 class="post-title"><a asp-controller="Blog" asp-action="BlogDetay" asp-route-id=@item.BlogId>@item.BlogBaslik</a></h5>
+                <div class="meta">
+                    <a href="#"><span class="mai-calendar"></span>@item.BlogTarih.ToShortDateString()</a>
+                    <a href="#"><span class="mai-chatbubbles"></span> 19</a>
+                </div>
+            </div>
+        </div>
+    }
+
+
+</div>
