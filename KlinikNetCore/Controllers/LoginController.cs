@@ -61,7 +61,7 @@ namespace KlinikNetCore.Controllers
             var result = await _sign.PasswordSignInAsync(oturum.username, oturum.password, false, false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Iletisim", "Iletisim");
             }
             return View();
         }
